@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Preview Design</title>
+    <style>
+        #main-img{
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+            display: block;
+            margin: 30px auto;
+        }
+        .product-img-container{
+            display: flex;
+            justify-content: center;
+        }
+
+        .product-img{
+            height: 80px;
+            width: 80px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img src="./img/main-img.jpg" alt="main-img" id="main-img"/>
+
+    <div class="product-img-container">
+        <img src="./img/main-img.jpg" alt="main-img" class="product-img" onclick="changeImage(1)">
+        <img src="./img/img-1.jpg" alt="1-img" class="product-img" onclick="changeImage(2)">
+        <img src="./img/img-2.jpg" alt="2-img" class="product-img" onclick="changeImage(3)">
+        <img src="./img/img-3.jpg" alt="3-img" class="product-img" onclick="changeImage(4)">
+    </div>
+
+    <script>
+        function changeImage(num){
+            const mainImg = document.getElementById('main-img');
+            if(num==1){
+                mainImg.src = "./img/main-img.jpg";
+            }
+            else if (num==2){
+                mainImg.src = "./img/img-1.jpg";
+            }
+            else if (num==3){
+                mainImg.src = "./img/img-2.jpg";
+            }
+            else if (num==4){
+                mainImg.src = "./img/img-3.jpg";
+            }
+        }
+    </script>
+</body>
+</html>
